@@ -3,7 +3,7 @@ parent:
   order: false
 -->
 <p align="center">
-  <img src="https://cdn.redixusercontent.ocfstudio.com/art.png" alt="Paxeer Network" width="1200">
+  <img src="https://cdn.redixusercontent.ocfstudio.com/Screenshot%202026-03-05%20225248.png" alt="Paxeer Network" width="1200">
 </p>
 <p align="center">
   <img src="https://img.shields.io/badge/Chain-Paxeer%20(125)-00B4D8?style=for-the-badge" alt="Paxeer" />
