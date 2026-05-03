@@ -3,7 +3,7 @@ parent:
   order: false
 -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Paxeer-Network/ecosystem-brandkits/refs/heads/main/paxeer/Precision_in_Every_Block__version_1.png" alt="Paxeer Network" width="1200">
+  <img src="https://github.com/Paxeer-Network/Paxeer-Network-Brand-Kit/blob/main/c58d1d8a-7e05-4438-ac3c-c7ea256e8b74.png?raw=true" alt="Paxeer Network" width="1200">
 </p>
 <p align="center">
   <img src="https://img.shields.io/badge/Chain-Paxeer%20(125)-00B4D8?style=for-the-badge" alt="Paxeer" />
@@ -21,50 +21,9 @@ parent:
  
 
 ## What is Paxeer?  
-Paxeer Network is a fully on-chain capital orchestration platform built as the **HyperPaxeer** high-throughput EVM-compatible chain (Chain ID 125). Powered by Cosmos SDK + CometBFT consensus, it delivers ~2-second block times, fast finality, and seamless Ethereum tooling compatibility while adding IBC interoperability for the future of cross-chain capital.  
+Paxeer Network is a fully on-chain capital orchestration platform built as the **HyperPaxeer** high-throughput EVM-compatible chain (Chain ID 125). Powered by Cosmos SDK + CometBFT consensus, it delivers ~0.104-second block times, Instant finality, and seamless Ethereum tooling compatibility while adding IBC interoperability for the future of cross-chain capital.  
 
 At its core, Paxeer solves the biggest problem in DeFi: **access to capital**. Instead of begging for liquidity or locking your own funds, the network funds **smart wallets** for traders, builders, and institutions based purely on on-chain activity and a proprietary risk engine.  
-
-### How It Actually Works  
-1. **Get Funded Instantly**  
-   Sign up at hyperpaxeer.com → Receive a network-issued smart wallet pre-funded with **$50,000 USDL** (no KYC, no credit check, no deposit).  
-
-2. **Trade, Build, or Experiment**  
-   Deploy on PaxDex (0.3% swap fees), use lending protocols, launch your own dApp, or simply trade spot/perps. Everything is tracked automatically.  
-
-3. **Argus Risk Engine**  
-   Our network-level algorithm monitors every funded wallet across 500+ on-chain + behavioral signals, powered by LLM decisioning. Perform well → unlock larger accounts ($100k, $250k, even $1M+). Underperform responsibly? You simply stay at your current level. No liquidation drama.  
-
-4. **Community-Powered Liquidity**  
-   All capital comes from transparent community pools (ETH, OP) and over **$1.5B** in collateralized staked $PAX. No VC middlemen. No platform fees skimming your profits.  
-
-You keep full non-custodial control. The network never touches your keys.  
-
-### Built for Builders  
-We’ve made shipping on Paxeer ridiculously easy:  
-- Browser-based dev portal with **900+ smart contract templates**  
-- One-click deploy + prebuilt frontends (Vercel/Netlify/Railway)  
-- Gas fully subsidized for approved developers  
-- $10,000 USDT Giga Dev Hackathon now live → build.hyperpaxeer.com/hackathon  
-
-Whether you’re launching the next blue-chip DEX, a novel yield product, or a game that actually drives on-chain volume, Paxeer is designed to reward **sticky, high-utility applications**.  
-
-### The Colosseum Is Open  
-Season 2026-02 is live right now.  
-47 gladiators already battling.  
-$50k starting armor.  
-Top performers earn permanent rank upgrades and the Golden Laurel NFT (yes, it’s a governance scepter).  
-
-No pay-to-win. Only skill and consistency.  
-→ colosseum.hyperpaxeer.com/dashboard  
-
-### Why Paxeer Matters  
-- **Traders**: Real capital with skin in the game, no personal downside beyond performance.  
-- **Builders**: Instant liquidity + subsidized infrastructure + direct path to product-market fit.  
-- **Institutions**: On-chain transparency, DAO governance, and scalable capital allocation without legacy overhead.  
-- **Everyone**: A true merit-based capital layer where your on-chain reputation is your credit score.  
-
-Native token **$PAX** powers staking, governance, and collateral. The network is already processing real volume with growing TVL and a vibrant community reclaiming ownership of the original OCF DeFi technology.  
 
 ### The Future of Capital Starts Here  
 Paxeer isn’t promising the future.  
@@ -74,9 +33,9 @@ Whether you’re a degen chasing alpha, a dev ready to ship, or an institution l
 
 **Your funded account is waiting.**  
 
-Start here → [hyperpaxeer.com](https://hyperpaxeer.com)  
-Docs & Explorer → [docs.hyperpaxeer.com](https://docs.hyperpaxeer.com)  
-Block Explorer → [paxscan.paxeer.app](https://paxscan.paxeer.app)  
+Start here → [paxeer.app](https://paxeer.app)  
+Docs & Explorer → [docs.paxeer.app](https://docs.paxeer.app)  
+Block Explorer → [paxscan.paxeer.app](https://paxscan.io)  
 X → [@paxeer_app](https://x.com/paxeer_app)  
 
 The arena is open.  
