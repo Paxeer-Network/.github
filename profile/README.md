@@ -16,35 +16,175 @@ parent:
 <h1 align="center">Paxeer Network: The Capital Layer of Web3</h1>
 
 <p align="center">
-  <strong>In a world where DeFi promises freedom but often delivers barriers high fees, KYC gates, capital lockups, and opaque risk models Paxeer Network is rewriting the rules. We are not just another blockchain. We are the onchain capital orchestration network that puts real trading and building capital directly into your hands, with zero upfront cost, zero subscriptions, and zero gatekeepers.  </strong>
+HyperPaxeer is a sovereign Proof-of-Stake blockchain purpose-built for capital orchestration. Running on the Alexandria Fork, it pairs a production EVM execution layer with the Argus Virtual Machine (AVM) a C++ register-based runtime that handles risk, capital allocation, and funded smart-wallet management. The April 2026 performance report shows 10 active validators, 48 RPC nodes, 14 active regions, and 277 ms average block production.
+
+<CardGroup cols={3}>
+  <Card title="5.25 M+ Blocks" icon="cube">
+    Genesis-to-report mainnet history
+  </Card>
+  <Card title="48 RPC Nodes" icon="globe">
+    47 EVM RPC nodes online across 14 active regions
+  </Card>
+  <Card title="277 ms Blocks" icon="bolt">
+    Official average block time with 341 ms p95
+  </Card>
+</CardGroup>
+
+---
+
+## Dual-VM Architecture
+
+```
+                   Paxeer Network
++----------------------+      +----------------------+                     
+|     EVM OS Layer     |█     |     Argus VM (AVM)   |█
+|    Alexandria Fork   |█     |   C++ runtime, .avm  |█
+|  Solidity contracts  |█     |  Risk engine         |█
+|  Custom precompiles  |█     | Capital orchestration|█
+|  0x901–0x904         |█     |  Smart wallet        |█
+|  Standard EVM tooling|█     |ArgLang scripts (.arg)|█
++----------------------+█     +----------------------+█
+████████████████████████      ████████████████████████
+CometBFT Consensus  ·  Cosmos SDK  ·  IBC
+```
+
+The **EVM OS** is the blockchain shell — consensus, networking, smart-contract execution, JSON-RPC. The **AVM** is the value engine — capital allocation, drawdown policy, funded-wallet lifecycle. Both layers communicate through on-chain contract boundaries (`IPaxSpotReader`, `IAllowanceProvider`).
+
+## Core Technology
+
+<CardGroup cols={2}>
+  <Card
+    title="Argus VM"
+    icon="microchip"
+    href="/argus-vm"
+  >
+    Register-based VM with 256-bit native arithmetic, deterministic gas metering, and the ArgLang smart-contract language
+  </Card>
+  <Card
+    title="Custom Precompiles"
+    icon="bolt"
+    href="/paxspot/precompiles"
+  >
+    Four stateful/stateless precompiles at 0x901–0x904 — OROB resolution, batch clearing, oracle aggregation, PoFQ scoring
+  </Card>
+  <Card
+    title="PAX-28 Token Standard"
+    icon="coins"
+    href="/pax-28"
+  >
+    Native fungible-token spec for ArgusVM — Rust-inspired syntax, built-in overflow protection, optimised gas
+  </Card>
+  <Card
+    title="x/paxoracle Module"
+    icon="database"
+    href="/protocol/modules/paxoracle"
+  >
+    Cosmos SDK module for validator-submitted price feeds with confidence-weighted median aggregation
+  </Card>
+</CardGroup>
+
+---
+
+## Ecosystem Protocols
+
+<CardGroup cols={2}>
+  <Card
+    title="PaxSpot"
+    icon="chart-mixed"
+    href="/paxspot"
+  >
+    On-chain spot exchange with Oracle-Relative Order Book (OROB), dual-mode matching, lazy-netting settlement, and capital-integrated trading
+  </Card>
+  <Card
+    title="HyperPax DEX"
+    icon="arrow-right-arrow-left"
+    href="/sidiora/dex"
+  >
+    Adaptive Sigmoid AMM — tanh bonding curve, progressive quadratic fees, LP loyalty rewards, oracle-pegged pools, Diamond Standard upgradeability
+  </Card>
+  <Card
+    title="HyperPax Perps"
+    icon="chart-line"
+    href="/sidiora/perps"
+  >
+    Network-operated perpetual futures protocol with Diamond facets, on-chain order book, and oracle pricing
+  </Card>
+  <Card
+    title="Sidiora.fun"
+    icon="rocket"
+    href="/sidiora/fun"
+  >
+    Launchpad AMM with virtual USDL reserves, per-pool Beacon proxies, and Opticals
+  </Card>
+  <Card
+    title="Sidiora.ag"
+    icon="route"
+    href="/sidiora/ag"
+  >
+    Meta-AG routing layer for Paxeer liquidity, adapters, quotes, and execution tracking
+  </Card>
+  <Card
+    title="BlockScout API"
+    icon="magnifying-glass"
+    href="/blockscout-api"
+  >
+    REST API for querying transactions, blocks, addresses, and tokens on PaxScan
+  </Card>
+</CardGroup>
+
+---
+
+## Network Details
+
+```json
+{
+  "networkName": "HyperPaxeer",
+  "rpcUrl": "https://public-rpc.paxeer.app/rpc",
+  "chainId": 125,
+  "cosmosChainId": "hyperpax_125-1",
+  "currencySymbol": "PAX",
+  "baseDenom": "ahpx",
+  "displayDenom": "hpx",
+  "decimals": 18,
+  "bech32Prefix": "pax",
+  "blockExplorer": "https://paxscan.io",
+  "averageBlockTime": "277ms",
+  "binary": "hyperpaxd_2.0.3"
+}
+```
+
+---
+
+## Developer Resources
+
+<CardGroup cols={2}>
+  <Card
+    title="JSON-RPC Reference"
+    icon="terminal"
+    href="/rpc"
+  >
+    Test Ethereum JSON-RPC, Cosmos gRPC, and CometBFT RPC methods
+  </Card>
+  <Card
+    title="Code Examples"
+    icon="brackets-curly"
+    href="/examples"
+  >
+    End-to-end integration samples in TypeScript, Python, and Solidity
+  </Card>
+  <Card
+    title="SDKs and Tools"
+    icon="toolbox"
+    href="/tools"
+  >
+    Foundry, Hardhat, wagmi, viem, cosmjs, and hpx CLI
+  </Card>
+  <Card
+    title="Network Status"
+    icon="signal"
+    href="/network-status"
+  >
+    Live node health, latency benchmarks, and validator set
+  </Card>
+</CardGroup>
 </p>
- 
-
-## What is Paxeer?  
-Paxeer Network is a fully on-chain capital orchestration platform built as the **HyperPaxeer** high-throughput EVM-compatible chain (Chain ID 125). Powered by Cosmos SDK + CometBFT consensus, it delivers ~0.104-second block times, Instant finality, and seamless Ethereum tooling compatibility while adding IBC interoperability for the future of cross-chain capital.  
-
-At its core, Paxeer solves the biggest problem in DeFi: **access to capital**. Instead of begging for liquidity or locking your own funds, the network funds **smart wallets** for traders, builders, and institutions based purely on on-chain activity and a proprietary risk engine.  
-
-### The Future of Capital Starts Here  
-Paxeer isn’t promising the future.  
-We are **building** it—right now, on-chain, transparently, and without permission.  
-
-Whether you’re a degen chasing alpha, a dev ready to ship, or an institution looking for the next capital primitive:  
-
-**Your funded account is waiting.**  
-
-Start here → [paxeer.app](https://paxeer.app)  
-Docs & Explorer → [docs.paxeer.app](https://docs.paxeer.app)  
-Block Explorer → [paxscan.paxeer.app](https://paxscan.io)  
-X → [@paxeer_app](https://x.com/paxeer_app)  
-
-The arena is open.  
-The capital is flowing.  
-The only question left is:  
-
-**Are you stepping in?**  
-
-— Paxeer Network Protocol  
-*The Capital Layer of Web3*  
-
-Let’s orchestrate the future together. 🚀
