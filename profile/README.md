@@ -1,140 +1,57 @@
-<!--
-parent:
-  order: false
--->
 <p align="center">
   <img src="https://github.com/Paxeer-Network/.github/blob/main/blocks.png?raw=true" alt="Paxeer Network" width="1200">
 </p>
-<p align="center">
-  <img src="https://img.shields.io/badge/Chain-Paxeer%20(125)-00B4D8?style=for-the-badge" alt="Paxeer" />
-  <img src="https://img.shields.io/badge/License-GPL--3.0-blue?style=for-the-badge" alt="License" />
-  <img src="https://img.shields.io/badge/Status-Deployed-brightgreen?style=for-the-badge" alt="Status" />
-  
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Chain_ID-125-00B4D8?style=for-the-badge" alt="Chain ID 125" />
+  <img src="https://img.shields.io/badge/Cosmos-hyperpax__125--1-111827?style=for-the-badge" alt="Cosmos chain id" />
+  <img src="https://img.shields.io/badge/LayerX-Limited_beta_Sept_7-7c3aed?style=for-the-badge" alt="LayerX beta" />
 </p>
 
-<h1 align="center">Paxeer Network: The Capital Layer of Web3</h1>
+<h1 align="center">Paxeer Network</h1>
 
 <p align="center">
-HyperPaxeer is a sovereign Proof-of-Stake blockchain purpose-built for capital orchestration. Running on the Alexandria Fork, it pairs a production EVM execution layer with the Argus Virtual Machine (AVM) a C++ register-based runtime that handles risk, capital allocation, and funded smart-wallet management. The April 2026 performance report shows 10 active validators, 48 RPC nodes, 14 active regions, and 277 ms average block production.
+  <strong>The settlement layer for machine commerce.</strong><br />
+  An EVM L1 (chain ID <code>125</code>) where agents hold policy-bound wallets, pay for work, and leave a record they cannot rewrite.
+</p>
 
-<CardGroup cols={3}>
-  <Card title="5.25 M+ Blocks" icon="cube">
-    Genesis-to-report mainnet history
-  </Card>
-  <Card title="48 RPC Nodes" icon="globe">
-    47 EVM RPC nodes online across 14 active regions
-  </Card>
-  <Card title="277 ms Blocks" icon="bolt">
-    Official average block time with 341 ms p95
-  </Card>
-</CardGroup>
+<p align="center">
+  <a href="https://paxeer.app">paxeer.app</a> ·
+  <a href="https://layerx.paxeer.app">LayerX</a> ·
+  <a href="https://paxscan.io">Paxscan</a> ·
+  <a href="https://github.com/Sidiora-Labs/LayerX-Protocol">LayerX Protocol</a>
+</p>
 
 ---
 
-## Dual-VM Architecture
+## What this org is
 
-```
-                   Paxeer Network
-+----------------------+      +----------------------+                     
-|     EVM OS Layer     |█     |     Argus VM (AVM)   |█
-|    Alexandria Fork   |█     |   C++ runtime, .avm  |█
-|  Solidity contracts  |█     |  Risk engine         |█
-|  Custom precompiles  |█     | Capital orchestration|█
-|  0x901–0x904         |█     |  Smart wallet        |█
-|  Standard EVM tooling|█     |ArgLang scripts (.arg)|█
-+----------------------+█     +----------------------+█
-████████████████████████      ████████████████████████
-CometBFT Consensus  ·  Cosmos SDK  ·  IBC
-```
+Paxeer is the chain. **LayerX** is the fast activity lane that sits on it.
 
-The **EVM OS** is the blockchain shell — consensus, networking, smart-contract execution, JSON-RPC. The **AVM** is the value engine — capital allocation, drawdown policy, funded-wallet lifecycle. Both layers communicate through on-chain contract boundaries (`IPaxSpotReader`, `IAllowanceProvider`).
+| Layer | Owns |
+| --- | --- |
+| **Paxeer L1** | Custody, checkpoints, guarantor bonds, challenges, withdrawals, emergency exits |
+| **LayerX** | Identity, delegated authority, global ordering, balances, payments, agreements, trading, receipts, replay |
 
-## Core Technology
+Thousands of LayerX activities can collapse into one periodic checkpoint. A normal agent payment does not require a Paxeer transaction. Custody never leaves Paxeer.
 
-<CardGroup cols={2}>
-  <Card
-    title="Argus VM"
-    icon="microchip"
-    href="/argus-vm"
-  >
-    Register-based VM with 256-bit native arithmetic, deterministic gas metering, and the ArgLang smart-contract language
-  </Card>
-  <Card
-    title="Custom Precompiles"
-    icon="bolt"
-    href="/paxspot/precompiles"
-  >
-    Four stateful/stateless precompiles at 0x901–0x904 — OROB resolution, batch clearing, oracle aggregation, PoFQ scoring
-  </Card>
-  <Card
-    title="PAX-28 Token Standard"
-    icon="coins"
-    href="/pax-28"
-  >
-    Native fungible-token spec for ArgusVM — Rust-inspired syntax, built-in overflow protection, optimised gas
-  </Card>
-  <Card
-    title="x/paxoracle Module"
-    icon="database"
-    href="/protocol/modules/paxoracle"
-  >
-    Cosmos SDK module for validator-submitted price feeds with confidence-weighted median aggregation
-  </Card>
-</CardGroup>
+LayerX is **source-available** and in **limited beta** (opens September 7). There is no public LayerX RPC, faucet, or explorer yet — and **no LayerX token**. Agents hold **USDX** inside LayerX; **USDL** backs it one-for-one on this L1; **HPX / PAX** is Paxeer gas.
 
 ---
 
-## Ecosystem Protocols
+## Network
 
-<CardGroup cols={2}>
-  <Card
-    title="PaxSpot"
-    icon="chart-mixed"
-    href="/paxspot"
-  >
-    On-chain spot exchange with Oracle-Relative Order Book (OROB), dual-mode matching, lazy-netting settlement, and capital-integrated trading
-  </Card>
-  <Card
-    title="HyperPax DEX"
-    icon="arrow-right-arrow-left"
-    href="/sidiora/dex"
-  >
-    Adaptive Sigmoid AMM — tanh bonding curve, progressive quadratic fees, LP loyalty rewards, oracle-pegged pools, Diamond Standard upgradeability
-  </Card>
-  <Card
-    title="HyperPax Perps"
-    icon="chart-line"
-    href="/sidiora/perps"
-  >
-    Network-operated perpetual futures protocol with Diamond facets, on-chain order book, and oracle pricing
-  </Card>
-  <Card
-    title="Sidiora.fun"
-    icon="rocket"
-    href="/sidiora/fun"
-  >
-    Launchpad AMM with virtual USDL reserves, per-pool Beacon proxies, and Opticals
-  </Card>
-  <Card
-    title="Sidiora.ag"
-    icon="route"
-    href="/sidiora/ag"
-  >
-    Meta-AG routing layer for Paxeer liquidity, adapters, quotes, and execution tracking
-  </Card>
-  <Card
-    title="BlockScout API"
-    icon="magnifying-glass"
-    href="/blockscout-api"
-  >
-    REST API for querying transactions, blocks, addresses, and tokens on PaxScan
-  </Card>
-</CardGroup>
+| | |
+| --- | --- |
+| **EVM chain ID** | `125` |
+| **Cosmos chain ID** | `hyperpax_125-1` |
+| **Public RPC** | `https://public-rpc.paxeer.app/rpc` |
+| **Explorer** | [paxscan.io](https://paxscan.io) |
+| **Bech32 prefix** | `pax` |
+| **Native gas** | HPX (`ahpx`, 18 decimals) — also called PAX on LayerX surfaces |
+| **Runtime** | `hyperpaxd` (Alexandria Fork) |
 
----
-
-## Network Details
+April 2026 performance report ([`paxeer-performance-report`](https://github.com/Paxeer-Network/paxeer-performance-report)): 10 validators, 48 RPC nodes, 14 regions, **277 ms** average block time (341 ms p95).
 
 ```json
 {
@@ -142,49 +59,73 @@ The **EVM OS** is the blockchain shell — consensus, networking, smart-contract
   "rpcUrl": "https://public-rpc.paxeer.app/rpc",
   "chainId": 125,
   "cosmosChainId": "hyperpax_125-1",
-  "currencySymbol": "PAX",
   "baseDenom": "ahpx",
   "displayDenom": "hpx",
   "decimals": 18,
   "bech32Prefix": "pax",
-  "blockExplorer": "https://paxscan.io",
-  "averageBlockTime": "277ms",
-  "binary": "hyperpaxd_2.0.3"
+  "blockExplorer": "https://paxscan.io"
 }
 ```
 
+Add the chain in MetaMask / any EVM wallet with those fields. Standard tooling works: Foundry, Hardhat, wagmi, viem, ethers.
+
 ---
 
-## Developer Resources
+## Architecture
 
-<CardGroup cols={2}>
-  <Card
-    title="JSON-RPC Reference"
-    icon="terminal"
-    href="/rpc"
-  >
-    Test Ethereum JSON-RPC, Cosmos gRPC, and CometBFT RPC methods
-  </Card>
-  <Card
-    title="Code Examples"
-    icon="brackets-curly"
-    href="/examples"
-  >
-    End-to-end integration samples in TypeScript, Python, and Solidity
-  </Card>
-  <Card
-    title="SDKs and Tools"
-    icon="toolbox"
-    href="/tools"
-  >
-    Foundry, Hardhat, wagmi, viem, cosmjs, and hpx CLI
-  </Card>
-  <Card
-    title="Network Status"
-    icon="signal"
-    href="/network-status"
-  >
-    Live node health, latency benchmarks, and validator set
-  </Card>
-</CardGroup>
-</p>
+Paxeer pairs a production **EVM** execution layer with the **Argus Virtual Machine** (AVM) — a C++ register-based runtime for risk, capital allocation, and funded smart-wallet management.
+
+```
+                    Paxeer Network
++----------------------+      +----------------------+
+|     EVM OS layer     |      |     Argus VM (AVM)   |
+|    Alexandria Fork   |      |   C++ runtime, .avm  |
+|  Solidity contracts  |      |  Risk + capital      |
+|  Custom precompiles  |      |  Funded smart wallet |
+|  0x901–0x904         |      |  ArgLang (.arg)      |
++----------------------+      +----------------------+
+         CometBFT  ·  Cosmos SDK  ·  IBC
+```
+
+The EVM is the shell (consensus, networking, JSON-RPC). The AVM is the value engine. They meet at on-chain contract boundaries.
+
+**LayerX** is not a general-purpose rollup. It is the agent activity layer: one signed record per action (LXC/1), eight protocol modules, and **402LXP** as the only balance writer. You pay for work done (bytes, signatures, state) — specified base fee **5,000 µUSDX** (~½¢). Finality is L0→L4 onto this chain. The guarantee behind a batch is bonded re-execution, not a validity proof.
+
+---
+
+## Start here
+
+| Repo | What it is |
+| --- | --- |
+| [`hyperpaxeer-os`](https://github.com/Paxeer-Network/hyperpaxeer-os) | HyperPaxeer runtime / node |
+| [`paxeer-performance-report`](https://github.com/Paxeer-Network/paxeer-performance-report) | April 2026 network report |
+| [`Paxeer-Smart-Contract-SDK`](https://github.com/Paxeer-Network/Paxeer-Smart-Contract-SDK) | Solidity building blocks |
+| [`Paxeer-Token-Registry`](https://github.com/Paxeer-Network/Paxeer-Token-Registry) | Token registry |
+| [`paxport-android-apk`](https://github.com/Paxeer-Network/paxport-android-apk) | Paxport — self-custody wallet |
+| [`Paxeer-Network-Brand-Kit`](https://github.com/Paxeer-Network/Paxeer-Network-Brand-Kit) | Brand |
+| [`Sidiora-Labs/LayerX-Protocol`](https://github.com/Sidiora-Labs/LayerX-Protocol) | LayerX node, spec, SDKs, MCP (source-available) |
+| [LayerX wiki](https://github.com/Sidiora-Labs/LayerX-Protocol/wiki) | Protocol, modules, fees, status |
+
+Markets and applications live in this org too (spot, perps, launchpad, options, oracles). Prefer the current runtime and the LayerX protocol repo over archived `Pax-v1-*` trees.
+
+---
+
+## LayerX, plainly
+
+- Limited beta opens **September 7**.
+- Source is open for inspection while we qualify the public lane.
+- No public LayerX RPC / faucet / explorer yet.
+- No LayerX token and no token sale.
+- License during development is inspection-only; broader license after qualification. See the [LayerX LICENSE](https://github.com/Sidiora-Labs/LayerX-Protocol/blob/main/LICENSE).
+
+If a page claims “LayerX is live,” “zero LayerX fees,” or a LayerX token, it is not from this org or Sidiora Labs.
+
+---
+
+## Which Paxeer / LayerX?
+
+This organization is **Paxeer Network** (EVM `125`), specified with LayerX as **LXP1** by [Sidiora Labs](https://github.com/Sidiora-Labs).
+
+Ours: [paxeer.app](https://paxeer.app) · [layerx.paxeer.app](https://layerx.paxeer.app) · [sidiora.xyz](https://sidiora.xyz) · [github.com/Sidiora-Labs](https://github.com/Sidiora-Labs)
+
+Other companies use these names. A page that does not trace back to one of those is a different project.
